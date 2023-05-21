@@ -1,0 +1,363 @@
+@import url('https//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900;&display=swap');
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content{
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #23242a;;
+
+}
+
+.content .contact-container{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    top: 0;
+}
+
+.content .contact-container .locate{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 500px;
+    height: 100%;
+    right: 10%;
+}
+
+.content .contact-container .locate .map{
+    border-radius: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.content .contact-container .locate .map iframe{
+    height: 400px;
+    width: 500px;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.content .contact-container form{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    left: 10%;
+    border: 2px solid black;
+    border-radius: 50px;
+    background: rgb(188,143,143);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.content .contact-container form #contact-header{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    top: 0;
+    
+}
+
+.content .contact-container form #contact-header h2{
+    font-family: Rockwell;
+    font-size: 40px;
+    color: #592720;
+    letter-spacing: 0.1em;
+}
+
+.content .contact-container form .contact-input{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    top: 150px;
+
+}
+
+.content .contact-container form .contact-input input{
+    position: absolute;
+    width: 300px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #23242a;
+    margin-left: 50px;
+    padding: 0 10px 0 10px;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.content .contact-container form .contact-input span{
+    position: absolute;
+    font-family: Rockwell;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-left: 50px;
+    transition: 0.5s;
+    pointer-events: none; 
+}
+
+.content .contact-container form .contact-input input:valid ~ span,
+.content .contact-container form .contact-input input:focus ~ span
+{
+    font-size: 18px;
+    transform: translateY(-34px);
+}
+
+.content .contact-container form .contact-input i{
+    position: absolute; 
+    height: 2px;
+    width: 300px;
+    border-radius: 4px;
+    background: #ffd1dc;
+    bottom: -20px;
+    margin-left:50px;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.content .contact-container form .contact-input input:valid ~ i,
+.content .contact-container form .contact-input input:focus ~ i
+{
+    height: 40px;
+    background: #ffd1dc;
+    transform: translateY(0px);
+}
+
+.content .contact-container form .contact-message{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    width: 300px;
+    top: 320px;
+}
+
+.content .contact-container form .contact-message label{
+    position: absolute;
+    font-family: Rockwell;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    bottom: 85px;
+    margin-left: 10px;
+    z-index: 5;
+}
+
+.content .contact-container form .contact-message textarea{   
+    position: absolute;
+    height: 150px;
+    width: 100%;
+    font-weight: 600;
+    background: #ffd1dc;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px;    
+}
+
+.content .contact-container form .contact-btn{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 430px;
+}
+
+.content .contact-container form .contact-btn button{
+    position: relative;
+    width: 300px;
+    font-weight: 600; 
+    letter-spacing: 0.15em;
+    border-radius: 20px;
+    border: none;
+    padding-top: 6px ;
+    padding-bottom: 6px;
+    background: #ffd1dc;
+}
+
+.content .contact-container form .contact-btn button:hover{
+    background: #ffd1dc;
+    cursor: pointer;
+}
+
+.content .message-container{
+    position: absolute;
+    height: 30%;
+    width: 40%;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    bottom: 0;
+    white-space: nowrap;
+    
+}
+
+.content .message-container #message-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100px;
+    top: 0;
+    display: none;
+}
+.content .message-container #message-header h2{
+    color: #592720;
+    letter-spacing: 0.1em;
+    font-family: Rockwell;
+    font-size: 45px;
+}
+
+
+
+
+.content .message-container .message-box{
+    position: absolute;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+
+.content .message-container .message-box .display-message {
+    position: relative;
+    width: 450px;
+    background: #ffd1dc;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 10px;
+    margin: 40px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.content .message-container .message-box .display-message .nameanddate{
+    position: relative;
+    display: flex;
+}
+
+.content .message-container .message-box .display-message .nameanddate .date{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: right;
+    width: 100px;
+    font-family: consolas;
+    font-size: 12px;  
+}
+
+.content .message-container .message-box .display-message .nameanddate .name{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: left;
+    width: 330px;
+    font-family: Rockwell;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.content .message-container .message-box .display-message .message{
+    position: relative;
+    border-left: 5px dotted #7b3f00;
+    letter-spacing: 0.1em;
+    text-align: justify;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.content .message-container .message-box .display-message .message textarea{
+    height: 90px;
+    width: 400px;
+    background: transparent;
+    margin-left:5px;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: justify;
+    border: none;
+    outline: none;    
+    resize: none;   
+}
+
+.content .message-container .message-box .display-message .message textarea:hover{
+    cursor: default;
+}
+
+.content .contact-box .welcome #first{
+    position: absolute;
+    top: 20%;
+}
+.content .contact-box .welcome #second{
+    position: absolute;
+    left: 0;
+    top: 45%;
+}
+.content .contact-box .welcome #third{
+    position: absolute;
+    right: 0;
+    top: 45%;
+}
+.content .contact-box .welcome{
+  
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
