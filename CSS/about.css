@@ -1,0 +1,105 @@
+
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.container
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 72vh;
+  width: 100%;
+  bottom: 16%;
+}
+
+section 
+{
+  height: 72vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+.zero
+{
+  color: rgb(226,226,226);
+  text-shadow: 1px 1px 4px black;
+  font-size: 3.0em;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-clip{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container2{
+  width: 100%;
+  height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+.one 
+{
+  color: rgb(226,226,226);
+  text-shadow: 1px 1px 4px black;
+  background: url(elsokep.jpg);
+  text-align: center;
+  font-size: 1.8em;
+  background-size: cover;
+  background-position: center;
+}
+.two 
+{
+  color: rgb(226,226,226);
+  text-shadow: 1px 1px 4px black;
+  background: url(masodikkep.jpg);
+  text-align: center;
+  font-size: 1.8em;
+  background-size: cover;
+  background-position: center;
+}.three 
+{
+  color: rgb(226,226,226);
+  text-shadow: 1px 1px 4px black;
+  background: url(harmadikkep.jpg);
+  text-align: center;
+  font-size: 1.8em;
+  background-size: cover;
+  background-position: center;
+}.four 
+{
+  color: rgb(226,226,226);
+  text-shadow: 1px 1px 4px black;
+  background: url(negyedikkep.jpg);
+  text-align: center;
+  font-size: 1.8em;
+  background-size: cover;
+  background-position: center;
+}.five
+{
+  color: rgb(226,226,226);
+  text-shadow: 1px 1px 4px black;
+  background: url(otodikkep.jpeg);
+  text-align: center;
+  font-size: 1.8em;
+  background-size: cover;
+  background-position: center;
+}
