@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cookiestyle.css">
+    <title>Cookie</title>
+    <script src="geolocation.js"></script>
+    <style>
+        #mycanvas{border:3px solid blue;}
+        #from, #to {width:350px;
+                        height:210px;
+                        margin:10px;
+                        border:2px solid black;
+                        display: flex; align-content: center; justify-content: center; flex-wrap: wrap;
+                    }
+    </style>
+</head>
+<body>
+    <h1>Geolocation</h1>
+    <div id="yourlocation"></div>
+
+    <h1>Server Sent Events</h1>
+    <div id="result"></div>
+    <script>
+		if(typeof(EventSource) !== "undefined") {
+			var source = new EventSource("serverSentEvents.php");
+			source.onmessage = function(event) {
+				document.getElementById("result").innerHTML += event.data + "<br>";
+			};
+		} else
+		document.getElementById("result").innerHTML = "Sorry, your browser does not support server-sent events...";
+	</script>
+
+
+    <h1>Drag And Drop</h1>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+    <div id="from" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="a.jpg" draggable="true" ondragstart="drag(event)" id="drag1" height="180" width="auto">
+    </div>
+    <div id="to" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <h1>SVG</h1>
+    <svg width="300" height="50">
+        <rect width="300" height="50" style="fill:rgb(59, 173, 110);stroke-width:5;stroke:rgb(0,0,0)" />
+        <text fill="#ffffff" font-size="20" font-family="Verdana" x="100" y="40"> SVG </text>
+    </svg>
+
+    
+
+    <h1>Session Storage</h1>
+    <script type="text/javascript">
+        if( sessionStorage.hits )
+            sessionStorage.hits = Number(sessionStorage.hits) +1;
+        else
+            sessionStorage.hits = 1;
+        document.write("Total Hits :" + sessionStorage.hits );
+    </script>
+
+    <h1>Local Storage</h1>
+    <script type="text/javascript">
+        if( localStorage.hits )
+            localStorage.hits = Number(localStorage.hits) +1;
+        else
+            localStorage.hits = 1;
+        document.write("Total Hits :" + localStorage.hits );
+    </script>
+
+    <h1>Web Workers</h1>
+    <script>
+        function sayHello(){
+            alert("Welcome, here!" );
+        }
+    </script>
+    <input type="button" onclick="sayHello();" value="Welcome">
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    <div class="wrapper">
+        <img src="cookie.png" alt="">
+        <div class="content">
+            <header>Cookies Constent</header>
+            <p>This website use cookies to ensure you get the best experience on our website.</p>
+        </div>
+        <div class="buttons">
+            <button class="item">I understand</button>
+            <a href="#" classs ="item">Learn more</a>
+        </div>
+    </div>
+
+    <script>
+        const cookieBox = document.querySelector(".wrapper"),
+        acceptBtn = cookieBox.querySelector(".buttons button");
+
+        acceptBtn.onclick = ()=>{
+            document.cookie = "CookieBy=Szabi; max-age="+60*60*24*30;//Mennyi ideig él: 60mp * 60perc * 24óra * 30nap = 1 hónap
+            if(document.cookie){
+                cookieBox.classList.add("hide");
+            }else{
+                alert("Cookie can't be set!");
+            }
+        }
+
+        let checkCookie = document.cookie.indexOf("CookieBy=Szabi");
+        checkCookie != -1 ? cookieBox.classList.add("hide"): cookieBox.classList.remove("hide");
+    </script>
+</body>
+</html>
